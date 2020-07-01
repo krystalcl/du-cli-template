@@ -36,21 +36,25 @@ module.exports = {
     name: {
         "type": "string",
         "required": true,
-        "message": "Project name"
+        "message": "Project name",
+        name: 'name',
       },
     description: {
       type: 'string',
       required: false,
       message: 'Project description',
       default: 'A Vue.js project',
+      name: 'description',
     },
     author: {
       type: 'string',
       message: 'Author',
+      name: 'author',
     },
     build: {
       type: 'list',
       message: 'Vue build',
+      name: 'build',
       choices: [
         {
           name: 'Runtime + Compiler: recommended for most users',
@@ -68,15 +72,18 @@ module.exports = {
     router: {
       when: 'isNotTest',
       type: 'confirm',
+      name: 'router',
       message: 'Install vue-router?',
     },
     lint: {
       type: 'confirm',
+      name: 'lint',
       message: 'Use ESLint to lint your code?',
     },
     lintConfig: {
       when: 'lint',
       type: 'list',
+      name: 'lintConfig',
       message: 'Pick an ESLint preset',
       choices: [
         {
@@ -98,11 +105,13 @@ module.exports = {
     },
     unit: {
       type: 'confirm',
+      name: 'unit',
       message: 'Set up unit tests',
     },
     runner: {
       when: 'unit',
       type: 'list',
+      name: 'runner',
       message: 'Pick a test runner',
       choices: [
         {
