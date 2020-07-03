@@ -1,13 +1,7 @@
 <template>
   <div id="app">
-    <h2><%= data %></h2>
-    <ul>
-        <% if (list) { %>
-            <% for(var i=0;i<list.length;i++){ %>
-                <li><%=list[i]%></li>
-            <% } %>
-        <% } %>
-    <ul>
+    <h2><%= discription %></h2>
+    <h2><%= name %></h2>
   </div>
 </template>
 
